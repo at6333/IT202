@@ -13,7 +13,7 @@ $pin = mt_rand(999, 10000);
 $subj = "your pin";
 $msg = $pin;
 $to = "at633@g.njit.edu";
-//mail($to, $subj, $msg);
+mail($to, $subj, $msg);
 $_SESSION["pin"] = $pin;
 
 echo "<br> Pin: '$pin'";

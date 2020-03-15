@@ -35,40 +35,4 @@ else
     exit();
 }
 
-
-/*
-$s = "select * from users where ucid = '$ucid' and pass = '$pass' ";
-echo "<br> SQL insert $s";
-($t = mysqli_query($db, $s) ) or die(mysqli_error($db) );
-
-$num = mysqli_num_rows($t);
-if ($num == 0)
-{
-    echo "<br> Not authenticated";
-}
-else
-{
-    echo "<br> Authenticated successfully";
-}
-*/
-
-/*
-$s = "insert into transactions values('$ucid', '$account', '$amount', NOW(), 'N')";
-print "<br> SQL insert $s";
-
-mysqli_query($db, $s) or die(mysqli_error($db) );
-print "<br> Bye";
-
-    $s = "update accounts 
-        set balance = balance + '$amount', 
-        recent = NOW()
-
-        where
-            ucid = '$ucid' and account = '$account' ";
-
-print "<br> SQL update $s";
-
-mysqli_query($db, $s) or die(mysqli_error($db) );
-*/
-print "<br> Bye";
 ?>
