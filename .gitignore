@@ -1,0 +1,6 @@
+.settings
+config.*
+bin
+.metadeta
+.log
+*.log
