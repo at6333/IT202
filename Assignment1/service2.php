@@ -44,7 +44,7 @@ switch ($choice)
         break;
 }
 
-echo "<br> <a href=service1.php> Service1 </a>";
-echo "<br> <a href=logout.php> Logout </a>";
+echo "<br> <a href=service1.php> Service1 </a>" . " for new action";
+echo "<br> <a href=logout.php> Logout </a>" . " to exit";
 
 ?>

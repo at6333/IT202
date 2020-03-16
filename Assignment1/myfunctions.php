@@ -30,6 +30,8 @@ function retrieve($ucid, $num)
     global $ucid;
     $f = "select * from accounts where ucid = '$ucid' ";
     ($x = mysqli_query($db, $f) ) or die(mysqli_error($db) );
+    $s = "select * from transactions where ucid = '$ucid' ";
+    ($t = mysqli_query($db, $s) ) or die(mysqli_error($db) );
     while ($y = mysqli_fetch_array($x, MYSQLI_ASSOC))
     {
         echo "<hr>";
@@ -37,15 +39,13 @@ function retrieve($ucid, $num)
         $account = $y["account"];
         $balance = $y["balance"];
         $recent = $y["recent"];
-        echo "<strong>$ucid $account balance: $$balance $recent</strong>";
-        $s = "select * from transactions where ucid = '$ucid' ";
-        ($t = mysqli_query($db, $s) ) or die(mysqli_error($db) );
+        echo "<b>$ucid $account balance: $$balance $recent</b>";
         while ($r = mysqli_fetch_array($t, MYSQLI_ASSOC))
         {
             $amount = $r["amount"];
             $timestamp = $r["timestamp"];
             $mail = $r["mail"];
-            echo "<br> <em>$$amount $timestamp mail copy: '$mail'</em>";
+            echo "<br> <i>$$amount $timestamp mail copy: '$mail'</I>";
         }
     }
 }
