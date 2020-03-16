@@ -66,6 +66,8 @@ function update($ucid, $account, $amount)
     if ($affectedRows == 0)
     {
         echo "Overdraft; account balance didn't change";
+        $a = "delete from transactions where ucid = '$ucid' and account = '$account' and amount = '$amount'";
+        ($b = mysqli_query($db, $a) ) or die(mysqli_error($db) );
     }
     mysqli_close($db);
 }
