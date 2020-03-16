@@ -50,7 +50,7 @@ function retrieve($ucid, $num)
     }
 }
 
-function update($ucid, $account, $amount)
+function perform($ucid, $account, $amount)
 {
     global $db;
     $s = "insert into transactions values('$ucid', '$account', '$amount', NOW(), 'N')";

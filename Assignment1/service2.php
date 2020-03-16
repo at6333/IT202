@@ -33,7 +33,7 @@ switch ($choice)
         $ucid = $_SESSION["ucid"];
         $account = safe("account");
         $amount = safe("amount");
-        update($ucid, $account, $amount);
+        perform($ucid, $account, $amount);
         echo "<br> Account balance updated <br>";
         break;
     case "Clear":
