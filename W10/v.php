@@ -10,6 +10,10 @@ $text1 = "Good";
 $text2 = "Bye";
 $_SESSION["captcha"] = $text1 . $text2;
 
+$text1 = substr(str_shuffle(md5(time() ) ), 0, 4 );
+$text2 = "Bye";
+$_SESSION["captcha"] = $text1 . $text2;
+
 imagefilledrectangle($im, 10, 10, 390, 390, $white);
 imagettftext($im, 20, 0, 50, 200, $black, $font, $text1);
 imagettftext($im, 30, -60, 200, 50, $black, $font, $text2);
