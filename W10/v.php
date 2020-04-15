@@ -4,7 +4,7 @@ header("Content-Type: image/png");
 
 $im = imagecreatetruecolor(450, 200);
 $fillcolor = imagecolorallocate($im, 0, 175, 200);
-$bordercolor = imagecolorallocate($im, 200, 0, 0); // bonus 2
+$bordercolor = imagecolorallocate($im, 200, 0, 0);
 $textcolor1 = imagecolorallocate($im, 255, 255, 0);
 $textcolor2 = imagecolorallocate($im, 255, 0, 255);
 $black = imagecolorallocate($im, 0, 0, 0);
@@ -17,7 +17,7 @@ $_SESSION["captcha"] = $text1 . $text2;
 $sessionid = "Session ID: " . session_id();
 $captcha = "Captcha: " . $_SESSION["captcha"];
 
-imagefilledrectangle($im, 0, 0, 450, 200, $bordercolor); // bonus 2
+imagefilledrectangle($im, 0, 0, 450, 200, $bordercolor);
 imagefilledrectangle($im, 10, 10, 440, 190, $fillcolor);
 imagettftext($im, 20, 30, 150, 75, $black, $font1, $text1);
 imagettftext($im, 30, -60, 300, 125, $black, $font1, $text2);
